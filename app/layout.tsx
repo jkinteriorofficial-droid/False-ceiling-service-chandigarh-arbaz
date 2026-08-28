@@ -7,8 +7,24 @@ const notoHindi = Noto_Sans_Devanagari({ subsets: ["devanagari"], variable: "--f
 const playfair = Playfair_Display({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-playfair" })
 
 export const metadata: Metadata = {
-  title: "False Ceiling Service in Chandigarh | Mani Majra",
-  description: "Professional false ceiling and interior works in Mani Majra and Chandigarh. Free site visits, transparent pricing, clean installation, and a 1-year written warranty.",
+  metadataBase: new URL("https://falseceilingservice.com"),
+  title: {
+    default: "False Ceiling Service in Chandigarh | Mani Majra",
+    template: "%s | False Ceiling Service Chandigarh",
+  },
+  description: "Professional false ceiling and interior work in Mani Majra and Chandigarh. Get clear pricing, a free site visit, neat installation, and a one-year written warranty.",
+  alternates: { canonical: "/" },
+  keywords: ["false ceiling service Chandigarh", "gypsum false ceiling Mani Majra", "interior work Chandigarh"],
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://falseceilingservice.com",
+    siteName: "False Ceiling Service Chandigarh",
+    title: "False Ceiling Service in Chandigarh | Mani Majra",
+    description: "Ceilings, partitions, wall panels, TV units, and practical interior work in Chandigarh.",
+  },
+  twitter: { card: "summary_large_image", title: "False Ceiling Service in Chandigarh", description: "Professional ceiling and interior work in Mani Majra and Chandigarh." },
+  robots: { index: true, follow: true },
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
